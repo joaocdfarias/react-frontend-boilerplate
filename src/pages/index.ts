@@ -1,3 +1,3 @@
-export * from './Home'
-export * from './About'
-export * from './Contact'
+export * from './Home/Home'
+export * from './About/About'
+export * from './Contact/Contact'
