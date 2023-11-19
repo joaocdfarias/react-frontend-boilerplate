@@ -1,4 +1,4 @@
-import { useTodos } from '../client/queries/useTodos'
+import { useTodos } from '../services/queries/useTodos'
 
 export const Home = () => {
   const { data } = useTodos()
