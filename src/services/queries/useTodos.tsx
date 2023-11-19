@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { useQuery } from 'react-query'
+import TodoClient from '../clients/todo-client'
 
 interface ITodos {
   userId: number
@@ -12,10 +12,7 @@ export const useTodos = () => {
   const queryKey = 'useTodos'
 
   const getTodos = async () => {
-    const response = await axios.get<ITodos[]>(
-      'https://jsonplaceholder.typicode.com/todos'
-    )
-
+    const response = await TodoClient.get<ITodos[]>('/todos')
     return response.data
   }
 
