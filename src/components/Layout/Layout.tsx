@@ -3,31 +3,16 @@ import { NavLink } from 'react-router-dom'
 import { Container } from '../Container/Container'
 import './style.css'
 
-interface ILayoutProps {
-  children: React.ReactNode
-}
-
 interface NavItems {
   text: string
   link: string
 }
+interface ILayoutProps {
+  children: React.ReactNode
+  navItems: NavItems[]
+}
 
-const navItems: NavItems[] = [
-  {
-    text: 'Home',
-    link: '/',
-  },
-  {
-    text: 'About',
-    link: '/about',
-  },
-  {
-    text: 'Contact',
-    link: '/contact',
-  },
-]
-
-export const Layout = ({ children }: ILayoutProps) => {
+export const Layout = ({ children, navItems }: ILayoutProps) => {
   return (
     <>
       <header>
